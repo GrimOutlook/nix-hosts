@@ -13,3 +13,6 @@
 [submodule "newyork"]
 	path = newyork
 	url = git@github.com:GrimOutlook/nix-host-newyork
+[submodule "paris"]
+	path = paris
+	url = git@github.com:GrimOutlook/nix-host-paris
