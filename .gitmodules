@@ -1,18 +1,24 @@
 [submodule "washington"]
 	path = washington
 	url = git@github.com:GrimOutlook/nix-host-washington
+	branch = main
 [submodule "london"]
 	path = london
 	url = git@github.com:GrimOutlook/nix-host-london
+	branch = main
 [submodule "belfast"]
 	path = belfast
 	url = git@github.com:GrimOutlook/nix-host-belfast
+	branch = main
 [submodule "taipei"]
 	path = taipei
 	url = git@github.com:GrimOutlook/nix-host-taipei
+	branch = main
 [submodule "newyork"]
 	path = newyork
 	url = git@github.com:GrimOutlook/nix-host-newyork
+	branch = main
 [submodule "paris"]
 	path = paris
 	url = git@github.com:GrimOutlook/nix-host-paris
+	branch = main
