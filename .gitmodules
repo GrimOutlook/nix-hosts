@@ -22,3 +22,6 @@
 	path = paris
 	url = git@github.com:GrimOutlook/nix-host-paris
 	branch = main
+[submodule "berlin"]
+	path = berlin
+	url = git@github.com:GrimOutlook/nix-host-berlin
