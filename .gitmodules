@@ -25,3 +25,6 @@
 [submodule "berlin"]
 	path = berlin
 	url = git@github.com:GrimOutlook/nix-host-berlin
+[submodule "pyongyang"]
+	path = pyongyang
+	url = git@github.com:GrimOutlook/nix-host-pyongyang
