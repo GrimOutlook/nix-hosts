@@ -57,6 +57,6 @@ update-homelab-networking *flakes="":
 # Update all hosts that need to connect to homelab hosts
 [group('homelab'), parallel]
 update-homelab-clients *flakes="": 
-  just berlin::deploy-update {{flakes}}
-  just paris::deploy-update {{flakes}}
+  -just berlin::deploy-update {{flakes}}
+  -just paris::deploy-update {{flakes}}
   echo "Finished updating homelab clients"
