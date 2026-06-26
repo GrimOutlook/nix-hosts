@@ -28,3 +28,12 @@
 [submodule "dunkirk"]
 	path = dunkirk
 	url = git@github.com:GrimOutlook/nix-host-dunkirk
+[submodule "oslo"]
+	path = oslo
+	url = git@github.com:GrimOutlook/nix-host-oslo
+[submodule "svalbard"]
+	path = svalbard
+	url = git@github.com:GrimOutlook/nix-host-svalbard
+[submodule "amsterdam"]
+	path = amsterdam
+	url = git@github.com:GrimOutlook/nix-host-amsterdam
