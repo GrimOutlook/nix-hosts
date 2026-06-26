@@ -37,3 +37,6 @@
 [submodule "amsterdam"]
 	path = amsterdam
 	url = git@github.com:GrimOutlook/nix-host-amsterdam
+[submodule "macao"]
+	path = macao
+	url = git@github.com:GrimOutlook/nix-host-macao
