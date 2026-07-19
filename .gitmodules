@@ -40,3 +40,6 @@
 [submodule "macao"]
 	path = macao
 	url = git@github.com:GrimOutlook/nix-host-macao
+[submodule "pyongyang"]
+	path = pyongyang
+	url = git@github.com:GrimOutlook/nix-host-pyongyang
