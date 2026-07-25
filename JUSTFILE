@@ -17,7 +17,6 @@ update-just:
 mod berlin
 mod? dubai
 mod dunkirk
-mod london
 mod newyork
 mod paris
 mod washington
@@ -44,8 +43,6 @@ _update-homelab-hosts *flakes="":
 [group('homelab')]
 update-homelab-service-hosts *flakes="":
   just washington::deploy-update {{flakes}}
-  # NOTE: Currently offline due to dead server
-  # just london::deploy-new-homelab
   echo "Finished updating homelab service hosts"
 
 # Update all homelab hosts that control networking

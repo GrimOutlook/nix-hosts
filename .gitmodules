@@ -2,10 +2,6 @@
 	path = washington
 	url = git@github.com:GrimOutlook/nix-host-washington
 	branch = main
-[submodule "london"]
-	path = london
-	url = git@github.com:GrimOutlook/nix-host-london
-	branch = main
 [submodule "belfast"]
 	path = belfast
 	url = git@github.com:GrimOutlook/nix-host-belfast
