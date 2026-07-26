@@ -16,7 +16,6 @@ update-just:
 
 mod berlin
 mod? dubai
-mod dunkirk
 mod newyork
 mod paris
 mod washington
