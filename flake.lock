@@ -264,11 +264,11 @@
         "vikunja": "vikunja"
       },
       "locked": {
-        "lastModified": 1788969237,
-        "narHash": "sha256-WA84+IQBOZNOZE8fjYGwzwbFaAKzrwGrmtWAKVgf1+Q=",
+        "lastModified": 1788998058,
+        "narHash": "sha256-DbTbSAatQIh/44V1r5MTR7YFTpN8zhwa3yso4AWg3iQ=",
         "ref": "refs/heads/main",
-        "rev": "f87d72a45d586522deb9ea1da20a459d5d229664",
-        "revCount": 58,
+        "rev": "24e2d1ff7272af60d071d176973b8d0269054103",
+        "revCount": 59,
         "type": "git",
         "url": "ssh://git@github.com/GrimOutlook/nix-host-amsterdam"
       },
@@ -6128,11 +6128,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1788965247,
-        "narHash": "sha256-/1cbTkUQDlCsn54mmn0FIOu4JI97njT0VDfrOn9+puE=",
+        "lastModified": 1788967651,
+        "narHash": "sha256-0krNXcDBIPdluKwMqqmYvL/ldUMAQ+upQM2w8Q0OvTU=",
         "ref": "refs/heads/main",
-        "rev": "6e6cfb0caca2db2266641cbc212c9e26947f9953",
-        "revCount": 215,
+        "rev": "10acdeb31af51bd6b7a04deac9f3df8c91006564",
+        "revCount": 216,
         "type": "git",
         "url": "ssh://git@github.com/GrimOutlook/nix-host-newyork"
       },
@@ -6424,11 +6424,11 @@
         "wayfinder-nvim": "wayfinder-nvim_6"
       },
       "locked": {
-        "lastModified": 1788964239,
-        "narHash": "sha256-wTorjqYcieqFvCaWsmAohnHOxf2xXW4vByNIWRB0VrM=",
+        "lastModified": 1788964825,
+        "narHash": "sha256-HHQHCnDc4kEO0THFGtLmq6zDwEgA0pnGYyqUM3PDAqg=",
         "owner": "GrimOutlook",
         "repo": "nix-config",
-        "rev": "07da96fa9b6243c3782db954f6d2064d53ef1fd2",
+        "rev": "eb4656fffffcfb1d3e6d6be92c930de37ec0b1bb",
         "type": "github"
       },
       "original": {
@@ -12344,11 +12344,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1785208836,
-        "narHash": "sha256-KywsioZx5jybl+IjKCJ/e8OHF5M5rvHzeGfSZJWVrRY=",
+        "lastModified": 1785210668,
+        "narHash": "sha256-UGlj4MycdYnHo5lulm9f70CcWvsFzqXIez8/GfGbnp8=",
         "ref": "refs/heads/main",
-        "rev": "47cf6deb3b44c5b0ec91e005cc452a113764f715",
-        "revCount": 14787,
+        "rev": "a986149cd20f9b96ac44040b28ba54b623b23e7f",
+        "revCount": 14788,
         "type": "git",
         "url": "https://github.com/GrimOutlook/vikunja"
       },
