@@ -264,11 +264,11 @@
         "vikunja": "vikunja"
       },
       "locked": {
-        "lastModified": 1788965029,
-        "narHash": "sha256-p6Nk0fFk5sCyjIT6I4wzDjr1mz9N+zyHjsQMRsSkiCA=",
+        "lastModified": 1788969237,
+        "narHash": "sha256-WA84+IQBOZNOZE8fjYGwzwbFaAKzrwGrmtWAKVgf1+Q=",
         "ref": "refs/heads/main",
-        "rev": "548296a48cee5afe71c4e8b71c15177cb5582bd1",
-        "revCount": 57,
+        "rev": "f87d72a45d586522deb9ea1da20a459d5d229664",
+        "revCount": 58,
         "type": "git",
         "url": "ssh://git@github.com/GrimOutlook/nix-host-amsterdam"
       },
@@ -12344,17 +12344,17 @@
         ]
       },
       "locked": {
-        "lastModified": 1785210668,
-        "narHash": "sha256-UGlj4MycdYnHo5lulm9f70CcWvsFzqXIez8/GfGbnp8=",
+        "lastModified": 1785208836,
+        "narHash": "sha256-KywsioZx5jybl+IjKCJ/e8OHF5M5rvHzeGfSZJWVrRY=",
         "ref": "refs/heads/main",
-        "rev": "a986149cd20f9b96ac44040b28ba54b623b23e7f",
-        "revCount": 14788,
+        "rev": "47cf6deb3b44c5b0ec91e005cc452a113764f715",
+        "revCount": 14787,
         "type": "git",
-        "url": "file:///home/grim/projects/vikunja"
+        "url": "https://github.com/GrimOutlook/vikunja"
       },
       "original": {
         "type": "git",
-        "url": "file:///home/grim/projects/vikunja"
+        "url": "https://github.com/GrimOutlook/vikunja"
       }
     },
     "washington": {
