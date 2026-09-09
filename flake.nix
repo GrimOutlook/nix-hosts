@@ -55,19 +55,22 @@
         amsterdam = { system = "x86_64-linux"; };
         berlin = { system = "x86_64-linux"; };
 
-        # aarch64: building on an x86_64 laptop needs either binfmt emulation
-        # or `remoteBuild`, which builds on the Pi itself.
+        # aarch64: the fleet defaults to building on the target, so the Pi
+        # builds its own system instead of requiring cross-compilation or
+        # binfmt emulation on the deployer.
         dubai = {
           system = "aarch64-linux";
-          remoteBuild = true;
         };
 
         macao = { system = "x86_64-linux"; };
 
-        # Router/firewall. The whole reason for adopting deploy-rs: a bad
-        # nftables change here severs the SSH path you would fix it over.
+        # Router/firewall. Build locally because this machine is not powerful
+        # enough to be a useful build host. The whole reason for adopting
+        # deploy-rs: a bad nftables change here severs the SSH path you would
+        # fix it over.
         newyork = {
           system = "x86_64-linux";
+          remoteBuild = false;
           confirmTimeout = 120;
         };
 
@@ -95,7 +98,7 @@
           system,
           sshUser ? "root",
           hostname ? name,
-          remoteBuild ? false,
+          remoteBuild ? true,
           confirmTimeout ? 30,
         }:
         {
