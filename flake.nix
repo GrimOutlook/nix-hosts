@@ -17,10 +17,8 @@
     newyork.url = "git+ssh://git@github.com/GrimOutlook/nix-host-newyork";
     oslo.url = "github:GrimOutlook/nix-host-oslo";
     paris.url = "github:GrimOutlook/nix-host-paris";
-    # The repo was renamed to nix-host-dunkirk; the host is still pyongyang,
-    # so the input keeps the host's name and points at the new repo. Private,
-    # hence ssh.
-    pyongyang.url = "git+ssh://git@github.com/GrimOutlook/nix-host-dunkirk";
+    # Security NVR host. Private, hence ssh.
+    dunkirk.url = "git+ssh://git@github.com/GrimOutlook/nix-host-dunkirk";
     svalbard.url = "github:GrimOutlook/nix-host-svalbard";
     washington.url = "git+ssh://git@github.com/GrimOutlook/nix-host-washington";
   };
@@ -80,7 +78,7 @@
         # keep using `sudo nixos-rebuild switch` locally.
         # paris = { system = "x86_64-linux"; };
 
-        pyongyang = { system = "x86_64-linux"; };
+        dunkirk = { system = "x86_64-linux"; };
 
         # Physically remote: no keyboard to plug in, so rollback matters.
         svalbard = {

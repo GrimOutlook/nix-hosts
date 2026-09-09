@@ -25,9 +25,9 @@
 [submodule "macao"]
 	path = macao
 	url = git@github.com:GrimOutlook/nix-host-macao
-[submodule "pyongyang"]
-	path = pyongyang
-	url = git@github.com:GrimOutlook/nix-host-pyongyang
+[submodule "dunkirk"]
+	path = dunkirk
+	url = git@github.com:GrimOutlook/nix-host-dunkirk
 [submodule "dubai"]
 	path = dubai
 	url = git@github.com:GrimOutlook/nix-host-dubai
