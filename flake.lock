@@ -264,11 +264,11 @@
         "vikunja": "vikunja"
       },
       "locked": {
-        "lastModified": 1788998058,
-        "narHash": "sha256-DbTbSAatQIh/44V1r5MTR7YFTpN8zhwa3yso4AWg3iQ=",
+        "lastModified": 1789000368,
+        "narHash": "sha256-RhIu0BSh4KevnHxEZ9pPUhZVOlivDebnModXEXkxI7I=",
         "ref": "refs/heads/main",
-        "rev": "24e2d1ff7272af60d071d176973b8d0269054103",
-        "revCount": 59,
+        "rev": "c88c438ea50a53b60345e1edc13ed66356be6c4f",
+        "revCount": 60,
         "type": "git",
         "url": "ssh://git@github.com/GrimOutlook/nix-host-amsterdam"
       },
@@ -5627,11 +5627,11 @@
         "rust-overlay": "rust-overlay"
       },
       "locked": {
-        "lastModified": 1787343825,
-        "narHash": "sha256-sdlhfRO0FsX6Q/7OXHapem0i+754rcHPVYpHGTGuDVQ=",
+        "lastModified": 1789000360,
+        "narHash": "sha256-u1qlgE33H9dpk2KUw9vgfMnD8ZuTxzw25UFdTaDFmJg=",
         "owner": "GrimOutlook",
         "repo": "lldap",
-        "rev": "02440a782bcd8d9b41a732192ef809ce5cd8c72d",
+        "rev": "7409e644b333101c52b95686b008695e4a5027e8",
         "type": "github"
       },
       "original": {
@@ -6128,11 +6128,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1788967651,
-        "narHash": "sha256-0krNXcDBIPdluKwMqqmYvL/ldUMAQ+upQM2w8Q0OvTU=",
+        "lastModified": 1789000401,
+        "narHash": "sha256-EmHgwTjdJpUr1yTt7Yw13z3XMJl7I6yI0XQZDcPvvKk=",
         "ref": "refs/heads/main",
-        "rev": "10acdeb31af51bd6b7a04deac9f3df8c91006564",
-        "revCount": 216,
+        "rev": "db6a2412dfc53a236c014df26fa66bb5471b7fca",
+        "revCount": 217,
         "type": "git",
         "url": "ssh://git@github.com/GrimOutlook/nix-host-newyork"
       },

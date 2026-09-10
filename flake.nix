@@ -24,7 +24,12 @@
   };
 
   outputs =
-    { self, nixpkgs, deploy-rs, ... }@inputs:
+    {
+      self,
+      nixpkgs,
+      deploy-rs,
+      ...
+    }@inputs:
     let
       inherit (nixpkgs) lib;
 
@@ -52,8 +57,12 @@
       # The fleet. `system` is the *target's* system, which selects the
       # matching deploy-rs activation library.
       nodes = {
-        amsterdam = { system = "x86_64-linux"; };
-        berlin = { system = "x86_64-linux"; };
+        amsterdam = {
+          system = "x86_64-linux";
+        };
+        berlin = {
+          system = "x86_64-linux";
+        };
 
         # aarch64: the fleet defaults to building on the target, so the Pi
         # builds its own system instead of requiring cross-compilation or
@@ -62,7 +71,9 @@
           system = "aarch64-linux";
         };
 
-        macao = { system = "x86_64-linux"; };
+        macao = {
+          system = "x86_64-linux";
+        };
 
         # Router/firewall. Build locally because this machine is not powerful
         # enough to be a useful build host. The whole reason for adopting
@@ -74,14 +85,18 @@
           confirmTimeout = 120;
         };
 
-        oslo = { system = "x86_64-linux"; };
+        oslo = {
+          system = "x86_64-linux";
+        };
 
         # paris is this laptop -- deploying to it over SSH makes little
         # sense, and `sudo -n` fails there anyway. Left out on purpose;
         # keep using `sudo nixos-rebuild switch` locally.
         # paris = { system = "x86_64-linux"; };
 
-        dunkirk = { system = "x86_64-linux"; };
+        dunkirk = {
+          system = "x86_64-linux";
+        };
 
         # Physically remote: no keyboard to plug in, so rollback matters.
         svalbard = {
@@ -89,7 +104,8 @@
           confirmTimeout = 120;
         };
 
-        washington = { system = "x86_64-linux"; };
+        # Currently down due to hardware fault
+        # washington = { system = "x86_64-linux"; };
       };
 
       forAllSystems = lib.genAttrs [
@@ -155,8 +171,9 @@
 
           profiles.system = {
             user = "root";
-            path = (deployPkgsFor system).deploy-rs.lib.activate.nixos
-              inputs.${name}.nixosConfigurations.${name};
+            path =
+              (deployPkgsFor system).deploy-rs.lib.activate.nixos
+                inputs.${name}.nixosConfigurations.${name};
             inherit remoteBuild;
           };
         };
@@ -180,6 +197,9 @@
         deploy-fleet = {
           type = "app";
           program = lib.getExe (mkDeploy system);
+          # `nix flake check` warns on apps without `meta`. `default` is
+          # defined as this attribute, so one description covers both.
+          meta.description = "Deploy the fleet, defaulting --rollback-succeeded to false";
         };
         default = deploy-fleet;
       });
