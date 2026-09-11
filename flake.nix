@@ -81,6 +81,7 @@
         # fix it over.
         newyork = {
           system = "x86_64-linux";
+          sshOpts = [ "-p" "49999" ];
           remoteBuild = false;
           confirmTimeout = 120;
         };
@@ -90,8 +91,8 @@
         };
 
         # paris is this laptop -- deploying to it over SSH makes little
-        # sense, and `sudo -n` fails there anyway. Left out on purpose;
-        # keep using `sudo nixos-rebuild switch` locally.
+        # sense. Left out on purpose; keep using `run0 nixos-rebuild switch`
+        # locally.
         # paris = { system = "x86_64-linux"; };
 
         dunkirk = {
@@ -154,13 +155,16 @@
         name:
         {
           system,
-          sshUser ? "root",
+          sshUser ? "deploy",
           hostname ? name,
+          sshOpts ? [ ],
           remoteBuild ? true,
           confirmTimeout ? 30,
+          sudo ? "sudo -n -u root /run/current-system/sw/bin/deploy-rs-sudo-bridge",
+          interactiveSudo ? false,
         }:
         {
-          inherit hostname sshUser;
+          inherit hostname sshUser sshOpts sudo interactiveSudo;
 
           # Activate, then require the deployer to reconnect within
           # `confirmTimeout` seconds -- otherwise the host rolls itself back
@@ -181,8 +185,9 @@
     {
       deploy.nodes = lib.mapAttrs mkNode nodes;
 
-      # `nix run . -- .` deploys the fleet; `nix develop` puts the same wrapper
-      # on PATH as plain `deploy`.
+      # `nix run . -- .` deploys the fleet using the deploy key loaded in the
+      # caller's SSH agent; `nix develop` puts the same wrapper on PATH as plain
+      # `deploy`.
       #
       # Deliberately NOT named `deploy`: deploy-rs reads its node data by
       # evaluating `<flake>#deploy` (cli.rs), and Nix resolves that to
