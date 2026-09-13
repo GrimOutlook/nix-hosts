@@ -2399,11 +2399,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1788965029,
-        "narHash": "sha256-YmPsuFY0zo770sAsfMOwWdWQdefFnAfHIScPyhyorDo=",
+        "lastModified": 1789320594,
+        "narHash": "sha256-Twgb1KmmoNEsgpsx4tEZGUbqXiJ9N+aov5m1esA+YZM=",
         "owner": "GrimOutlook",
         "repo": "nix-host-dubai",
-        "rev": "3d7b5ab823cc5184ae23210226e1822a3fca2dde",
+        "rev": "7956b68ae1f40418c6a165345a091c75220d72c2",
         "type": "github"
       },
       "original": {
