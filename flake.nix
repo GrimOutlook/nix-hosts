@@ -125,10 +125,19 @@
       # pyongyang should not roll back a good newyork. Each host still rolls
       # *itself* back on failure via magicRollback/autoRollback.
       #
-      # The flag is injected only when absent: clap rejects a repeated
-      # `--rollback-succeeded` ("cannot be used multiple times") rather than
-      # letting the last one win, so appending it unconditionally would make
-      # the option impossible to override.
+      # `--skip-checks` is on by default too. deploy-rs' pre-deploy
+      # `nix flake check` evaluates `checks` below, i.e. `deployChecks` for
+      # *every* node -- so deploying one host builds the whole fleet's
+      # activation closures on the deployer first (aarch64 under qemu,
+      # uncached source builds): a dunkirk-only deploy sat 45+ minutes in it
+      # on 2026-09-26. The real build happens on the target anyway
+      # (remoteBuild), and magicRollback still guards activation. Run
+      # `nix flake check` by hand when you actually want the fleet checked.
+      #
+      # Both flags are injected only when absent: clap rejects a repeated
+      # `--rollback-succeeded` or `--skip-checks` ("cannot be used multiple
+      # times") rather than letting the last one win, so appending them
+      # unconditionally would make the options impossible to override.
       mkDeploy =
         system:
         let
@@ -139,15 +148,21 @@
           # Called by full path, not via runtimeInputs: this wrapper is itself
           # named `deploy`, so putting the real one on PATH would recurse.
           text = ''
+            rollback=1
+            skip=1
             for arg in "$@"; do
               case "$arg" in
                 # Everything past `--` is passed through to `nix build`.
                 --) break ;;
-                --rollback-succeeded | --rollback-succeeded=*)
-                  exec ${pkgs.deploy-rs}/bin/deploy "$@" ;;
+                --rollback-succeeded | --rollback-succeeded=*) rollback= ;;
+                # Also matches `s` in a bundle of short flags, e.g. `-ds`.
+                --skip-checks | -s | -[!-]*s*) skip= ;;
               esac
             done
-            exec ${pkgs.deploy-rs}/bin/deploy --rollback-succeeded false "$@"
+            defaults=()
+            if [ -n "$rollback" ]; then defaults+=(--rollback-succeeded false); fi
+            if [ -n "$skip" ]; then defaults+=(--skip-checks); fi
+            exec ${pkgs.deploy-rs}/bin/deploy "''${defaults[@]}" "$@"
           '';
         };
 
