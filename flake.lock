@@ -2398,11 +2398,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1790632017,
-        "narHash": "sha256-VOdROGiiH6qweHUXuhTBQADDJIFv0PJgdjGRRuER8wM=",
+        "lastModified": 1790641095,
+        "narHash": "sha256-4u7y9C1NjYmEc9SaEUQlXlAGzaTfUCvUCPMor/JTb3k=",
         "ref": "refs/heads/main",
-        "rev": "73f4a55d17911211ccbbfaf4782312d37d0124f5",
-        "revCount": 110,
+        "rev": "6a672bd24b8c7db41521aa7b4bc69f9bdd11d045",
+        "revCount": 111,
         "type": "git",
         "url": "ssh://git@github.com/GrimOutlook/nix-host-dunkirk"
       },
