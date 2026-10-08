@@ -6031,11 +6031,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1791448330,
-        "narHash": "sha256-zLzzJv6fY9t0vi7wPUy3VgVqp2gGieCqEmF/WXdR3PI=",
+        "lastModified": 1791448753,
+        "narHash": "sha256-pAgFMYMxIBMndtuu6a0ThoUH+OkIKLQGM9nq+fMvnp0=",
         "ref": "refs/heads/main",
-        "rev": "5850eeece0ca24489295fbb25cb381a5a59a9623",
-        "revCount": 231,
+        "rev": "67f0fde934c964e86b420bf1903d92d7d24ecf1d",
+        "revCount": 232,
         "type": "git",
         "url": "ssh://git@github.com/GrimOutlook/nix-host-newyork"
       },
