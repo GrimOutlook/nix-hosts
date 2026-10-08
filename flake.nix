@@ -105,8 +105,12 @@
           confirmTimeout = 120;
         };
 
-        # Currently down due to hardware fault
-        # washington = { system = "x86_64-linux"; };
+        # Public web-service host. The longer confirmation window mirrors
+        # newyork's so the deployer can reconnect after activation.
+        washington = {
+          system = "x86_64-linux";
+          confirmTimeout = 120;
+        };
       };
 
       forAllSystems = lib.genAttrs [
