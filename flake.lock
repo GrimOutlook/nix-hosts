@@ -12331,11 +12331,11 @@
         "nixpkgs-llama": "nixpkgs-llama"
       },
       "locked": {
-        "lastModified": 1791681148,
-        "narHash": "sha256-gFc9RA3U1ALNmL+B8Tl2zsVffF6J0E2z21JPVjMFvdk=",
+        "lastModified": 1791684794,
+        "narHash": "sha256-PBPG3NdhFvWHbP7XNLTSBM0qxphWcN9kzDFkPVSiLvg=",
         "ref": "refs/heads/main",
-        "rev": "bccc2e50bdfd41d2840b20a1c30a7c9256793aa8",
-        "revCount": 162,
+        "rev": "4a2c23ede978fc3cc7f3775063b5d8e6c1719a3b",
+        "revCount": 163,
         "type": "git",
         "url": "ssh://git@github.com/GrimOutlook/nix-host-washington"
       },
